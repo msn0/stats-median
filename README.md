@@ -5,7 +5,7 @@
 ## Installation
 
 ```sh
-npm install stats-median
+$ npm install stats-median
 ```
 
 ## Usage
