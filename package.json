@@ -22,7 +22,7 @@
     "url": "https://github.com/msn0/stats-median/issues"
   },
   "homepage": "https://github.com/msn0/stats-median",
-  "dependencies": {
+  "devDependencies": {
     "mocha": "^4.0.1"
   }
 }
