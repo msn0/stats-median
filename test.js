@@ -12,4 +12,20 @@ describe("Median calculation", function () {
     assert.equal(median.calc(data2), 9.5);
     assert.equal(median.calc(data3), 5);
   });
+
+  it("test length of 0", function () {
+    var data = [];
+    // have to check this way because comparison with NaN always returns false
+    assert.equal(isNaN(median.calc(data)), true);
+  });
+
+  it("test length of 1", function () {
+    var data = [42];
+    assert.equal(median.calc(data), 42);
+  });
+
+  it("test length of 2", function () {
+    var data = [1, 2];
+    assert.equal(median.calc(data), 1.5);
+  });
 });
