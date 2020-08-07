@@ -15,8 +15,6 @@ describe("Median calculation", function () {
 
   it("test length of 0", function () {
     var data = [];
-    // have to check this way because comparison with NaN always returns false
-    assert.equal(isNaN(median.calc(data)), true);
     assert.throws(() => {
       median.calc(data);
     }, Error);

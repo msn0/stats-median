@@ -6,6 +6,9 @@ function comparator(n, m) {
 
 module.exports = {
   calc: function (data) {
+    if (data.length === 0) {
+      throw new Error("Cannot calculate median of empty data!");
+    }
     data.sort(comparator);
     if (data.length % 2 === 0) {
       return (data[data.length / 2 - 1] + data[data.length / 2]) / 2;
