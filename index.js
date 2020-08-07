@@ -6,10 +6,11 @@ function comparator(n, m) {
 
 module.exports = {
   calc: function (data) {
-    data.sort(comparator);
-    if (data.length % 2 === 0) {
-      return (data[data.length / 2 - 1] + data[data.length / 2]) / 2;
+    var copy = data.slice();
+    copy.sort(comparator);
+    if (copy.length % 2 === 0) {
+      return (copy[copy.length / 2 - 1] + copy[copy.length / 2]) / 2;
     }
-    return data[Math.floor(data.length / 2)];
+    return copy[Math.floor(copy.length / 2)];
   }
 };
