@@ -15,9 +15,7 @@ describe("Median calculation", function () {
 
   it("test length of 0", function () {
     var data = [];
-    assert.throws(() => {
-      median.calc(data);
-    }, Error);
+    assert.throws(() => median.calc(data), Error);
   });
 
   it("test length of 1", function () {
